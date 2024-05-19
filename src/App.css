@@ -1,38 +1,127 @@
+/* General styles for the application */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover {
+  background-color: #218838;
+}
+
+button:focus {
+  outline: none;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Styles for the ProductCard component */
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.product-card h2 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.product-card button {
+  background-color: #007bff;
+  margin-right: 10px;
+}
+
+.product-card button:last-child {
+  background-color: #dc3545;
+}
+
+.product-card button:hover {
+  opacity: 0.9;
+}
+
+/* Styles for the ProductFormModal component */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.ReactModal__Content {
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  outline: none;
+  position: relative;
+}
+
+.ReactModal__Content h2 {
+  margin-top: 0;
+}
+
+.ReactModal__Content form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ReactModal__Content input,
+.ReactModal__Content textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ReactModal__Content button {
+  background-color: #28a745;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.ReactModal__Content button:hover {
+  background-color: #218838;
 }
